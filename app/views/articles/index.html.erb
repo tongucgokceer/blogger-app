@@ -10,7 +10,11 @@
   <% end %>
 </ul>
 
-<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+<% if logged_in? %>
+  <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+<% end %>
+
+
 
 <h2><%= link_to "Show all Tags!", tags_path%></h2 >
 
